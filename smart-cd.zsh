@@ -21,4 +21,3 @@ _smart_cd_chpwd_handler () {
 
 autoload -U add-zsh-hook
 add-zsh-hook chpwd _smart_cd_chpwd_handler
-_smart_cd_chpwd_handler
