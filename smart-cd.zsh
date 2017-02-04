@@ -13,7 +13,7 @@ _smart_cd_chpwd_handler () {
     local gitdir="$(git rev-parse --git-dir 2>/dev/null)"
     if [[ -n "$gitdir" ]]; then
       gitdir="$gitdir:A" # absolute path of $gitdir
-      [[ "$gitdir" != "$_smart_cd_lastgitdir" ]] && (echo; git status)
+      [[ "$gitdir" != "$_smart_cd_lastgitdir" ]] && (echo; git status -sb)
       _smart_cd_lastgitdir="$gitdir"
     fi
   fi
